@@ -1,4 +1,5 @@
 
-const greet = (fname) =>{
-    console.log(`hello ${fname}`)
+const greet = () =>{
+    console.log(`hello world`)
 }
+
