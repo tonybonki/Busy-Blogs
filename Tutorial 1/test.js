@@ -1,2 +1,4 @@
-const fName = 'yoshi'
-console.log(fName)
+
+const greet = (fname) =>{
+    console.log(`hello ${fname}`)
+}
