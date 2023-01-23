@@ -5,11 +5,27 @@ const fs = require('fs')
 const server = http.createServer((request, response)=>{
     console.log(request.url, request.method)
 
-    // set header content type
+    // set header content type to html
     response.setHeader('Content-Type', 'text/html')
 
+    // Set the path based url that is requested
+    let path = './views/'
+
+    //Evaluate if the case matches with the requested url
+    switch(request.url) {
+        case '/': path += 'index.html'
+        response.statusCode = 200
+           break
+        case '/about': path += 'about.html'
+        response.statusCode = 200
+            break
+        default:path += '404.html'
+        response.statusCode = 404
+            break
+    }
+
    // send a html file
-   fs.readFile('./views/index.html', (err, data)=>{
+   fs.readFile(path, (err, data)=>{
     if (err){
         console.log(err)
         response.end()

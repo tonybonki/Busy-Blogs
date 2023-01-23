@@ -1,0 +1,4 @@
+200 - OK
+301 - Resource moved
+404 - Not Found
+500 - Internal server error
