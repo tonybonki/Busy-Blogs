@@ -8,11 +8,6 @@ const server = http.createServer((request, response)=>{
     
     // lodash
     const num = _.random(0, 20)
-    console.log(num)
-
-    const greet = ()=>{
-        console.log('hello')
-    }
 
     // set header content type to html
     response.setHeader('Content-Type', 'text/html')
