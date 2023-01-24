@@ -5,6 +5,9 @@ const express =  require('express')
 
 const app = express()
 
+// register the view engine ejs automatically looks in the views folder
+app.set('view engine', 'ejs')
+
 // listen for requests 
 app.listen(3000)
 
