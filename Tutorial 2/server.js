@@ -1,9 +1,18 @@
 //Require a HTTP Module
 const http = require('http');
 const fs = require('fs')
+const _ = require('lodash')
+
 // Create a server
 const server = http.createServer((request, response)=>{
-    console.log(request.url, request.method)
+    
+    // lodash
+    const num = _.random(0, 20)
+    console.log(num)
+
+    const greet = ()=>{
+        console.log('hello')
+    }
 
     // set header content type to html
     response.setHeader('Content-Type', 'text/html')
