@@ -11,8 +11,14 @@ app.set('view engine', 'ejs')
 // listen for requests 
 app.listen(3000)
 
+//Rounting and listening for requests
+
 app.get('/', (request, response)=>{
-    response.sendFile('./views/index.html', {root: __dirname})
+    response.render('index')
+})
+
+app.get('/about', (request, response)=>{
+    response.render('about')
 })
 
 app.get('/about', (request, response)=>{
@@ -21,6 +27,6 @@ app.get('/about', (request, response)=>{
 
 //404 page when a user uses aan url that has to link mapped to it.
 app.use((request, response)=>{
-    response.status(404).sendFile('./views/404.html', {root: __dirname})
+    response.status(404).render('404')
 })
 
