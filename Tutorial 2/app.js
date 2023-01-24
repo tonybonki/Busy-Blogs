@@ -1,4 +1,5 @@
 // Using Express
+const { request } = require('express')
 const express =  require('express') 
 
 // Express app
@@ -14,15 +15,20 @@ app.listen(3000)
 //Rounting and listening for requests
 
 app.get('/', (request, response)=>{
-    response.render('index')
+    const blogs = [
+        {title:'Tony becomes successful', snippet:'Lorem ipsum dolor sit amet consectetur'},
+        {title:'Jason learned that hes not human', snippet:'Lorem ipsum dolor sit amet consectetur'},
+        {title:'Micheal discovers the true meaning of life', snippet:'Lorem ipsum dolor sit amet consectetur'},
+    ]
+    response.render('index', {title:'home', blogs:blogs})
 })
 
 app.get('/about', (request, response)=>{
-    response.render('about')
+    response.render('about', {title:'about'})
 })
 
-app.get('/about', (request, response)=>{
-    response.sendFile('./views/about.html', {root: __dirname})
+app.get('/blogs/create', (request, response)=>{
+    response.render('create', {title:'Create a blog'})
 })
 
 //404 page when a user uses aan url that has to link mapped to it.

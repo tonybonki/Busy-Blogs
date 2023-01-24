@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3867/3867730.png">
-    <title>Tonjaro's Blog Page</title>
-</head>
+    <!-- Access the head partial component -->
+    <%- include ('./partials/head.ejs') %> 
+
 <body>
-    <nav>
-        <div class="site-title">
-            <a href="/"><h1> Tonjaro's Blog Page</h1></a>
-            <p>This is a really interesting blog page!</p>
-        </div>
-        <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs/create">New Blog</a></li>
-        </ul>
-    </nav>
+
+    <!-- Access the navbar partial component -->
+    <%- include ('./partials/nav.ejs') %> 
    
     <div class="blogs content">
         <h2>All Blogs</h2>
+
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                
+                <h3 class="title"><%= blog.title %></h3>
+                <p class="snippet"><%= blog.snippet %> </p>
+
+          <%  }) %>
+       <% } %>
 
     </div>
 
