@@ -3,22 +3,33 @@
     <!-- Access the head partial component -->
     <%- include ('./partials/head.ejs') %> 
 
+<section>
+
+    <div id="intro" class="bg-image" style="
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://cdn.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e.png');">     
+    </div>
+    
+    </section>
+
 <body>
 
     <!-- Access the navbar partial component -->
     <%- include ('./partials/nav.ejs') %> 
    
     <div class="blogs content">
-        <h2 style="width: 50%; color: #899E8B;" class="mx-auto">All Blogs</h2>
+        <h2 style="width: 60%; color: #b48261" class="mx-auto">All Blogs</h2>
 
-        <ul style="width: 50%;" class="list-group mx-auto my-3 rounded-0">
+        <ul style="width: 60%;" class="list-group mx-auto my-3 rounded-0">
         <% if (blogs.length > 0) { %>
             <% blogs.forEach(blog => { %>
                 
               
 
                     <li class="list-group-item px-0 pt-0">  
-                        <h4 style="color: white ; background-color:#99C5B5 ;" class="title px-2 "><%= blog.title %></h4>
+                        <h4 style="color: white ; background-color:#a89385 ;" class="title px-2 "><%= blog.title %></h4>
                         <p class="snippet px-2 pb-1"><%= blog.snippet %> </p>
                     </li>
                  

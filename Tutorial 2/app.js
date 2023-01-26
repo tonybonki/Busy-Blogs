@@ -20,7 +20,7 @@ app.get('/', (request, response)=>{
         {title:'Jason learned that hes not human', snippet:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellat deleniti incidunt ex mollitia odio, at numquam omnis. Itaque nobis maiores culpa earum consequuntur eius commodi totam libero nisi veritatis?'},
         {title:'Micheal discovers the true meaning of life', snippet:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellat deleniti incidunt ex mollitia odio, at numquam omnis. Itaque nobis maiores culpa earum consequuntur eius commodi totam libero nisi veritatis?'},
     ]
-    response.render('index', {title:'home', blogs:blogs})
+    response.render('index', {title:'blog', blogs:blogs})
 })
 
 app.get('/about', (request, response)=>{
