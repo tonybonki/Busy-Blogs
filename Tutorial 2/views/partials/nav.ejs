@@ -1,11 +1,84 @@
-<nav>
-    <div class="site-title">
-        <a href="/"><h1> The <%= title %> page </h1></a>
-        <p>This is a really interesting blog page!</p>
+
+<style>
+    /* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+
+.mask-custom {
+  background-color: rgb(255, 255, 255);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}
+
+body{
+    margin-top: 0%;
+}
+</style>
+
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+    <div class="container">
+      <a class="navbar-brand" href="#!"><span style=" text-transform: capitalize; color: #b48261;"><%=title%> <span style="color: black;">Page</span></a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs/create">New Blog</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <ul>
-        <li><a href="/">Blogs</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blogs/create">New Blog</a></li>
-    </ul>
-</nav>
+  </nav>
+  <!-- Navbar -->
+
+  <section>
+    <!-- Intro -->
+    <div id="intro" class="bg-image vh-100" style="
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url('https://cdn.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e.png');
+        ">
+      <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
+    </div>
+    <!-- Intro -->
+  </section>
