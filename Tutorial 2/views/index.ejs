@@ -10,6 +10,15 @@
             display: flex;
             align-items: center;
         }
+
+        /* Remove landing page border radius when in a width <= 766px */
+
+        @media only screen and (max-width: 766px) {
+
+        #landing-page-banner{
+            border-radius: 0px 0px 0px 0px !important; 
+        }
+        }
     </style>
 
     <div id="intro" class="bg-image vh-100" style="
@@ -18,7 +27,7 @@
     background-image: url('https://cdn.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e.png');">     
     </div>
 
-    <div style="position: absolute; top: 300px; height: min-content;" class="shadow-lg bg-white rounded-end center container-md ">
+    <div style="position: absolute; top: 300px; height: min-content;"  class="shadow-lg bg-white rounded-end center container-md" id="landing-page-banner">
         <div class="m-5">
             <h1 style="color: #b48261;">Write your Own!</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo a officia laboriosam sint voluptates aliquid eius exercitationem, eos voluptate quasi laudantium nostrum cupiditate eaque, et ullam dicta! Similique, quam itaque!</p>
@@ -28,6 +37,11 @@
     
     </section>
 
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container-fluid vh-100">
+          
+        </div>
+      </div>
     
 
 <body>
