@@ -6,6 +6,10 @@ const express =  require('express')
 
 const app = express()
 
+// Set public static directory for 
+app.use( express.static( "public" ) );
+
+
 // register the view engine ejs automatically looks in the views folder
 app.set('view engine', 'ejs')
 
