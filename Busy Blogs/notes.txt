@@ -4,3 +4,9 @@ Package.json = records important metadata about a project which is required befo
 publishing to NPM, and also defines functional attributes of a project that npm uses
 to install dependencies, run scripts, and identify the entry point to our package.
 
+Middleware Funcitons = Middleware functions are functions that have 
+access to the request object (req), the response object (res), and 
+the next middleware function in the application’s request-response cycle.
+
+Mongoose: Is an ODM library - Object Document Mapping Library itprovides us an
+easier way to connect to the MongoDb database.
