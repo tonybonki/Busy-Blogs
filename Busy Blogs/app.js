@@ -12,12 +12,16 @@ const app = express()
 
 const mongoose = require('mongoose')
 
-
+// Ignore deprecation warnings
 mongoose.set('strictQuery', true);
 
 // Connect to the MongoDb
 const dbURI = 'mongodb+srv://bonchii:wammerFishy2465@busyblogs.oaldwlg.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(dbURI)
+    .then((result)=>{
+        // listen for requests 
+        app.listen(3000)
+    })
 
 // Set public static directory to allow the browser to acess the files on the server
 // What files should be static?
@@ -27,8 +31,7 @@ app.use(express.static("public"))
 // register the view engine ejs automatically looks in the views folder
 app.set('view engine', 'ejs')
 
-// listen for requests 
-app.listen(3000)
+
 
 // Middleware that fires for ever request because it it at the top fo the file
 
