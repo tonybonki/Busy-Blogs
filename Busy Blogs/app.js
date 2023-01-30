@@ -4,9 +4,16 @@ const {
 } = require('express')
 const express = require('express')
 
+//Use path to aquire images and icons form the public folder
+const path = require('path')
+
 // Express app
 
 const app = express()
+
+// Set public static directory to allow the browser to acess the files on the server
+// What files should be static?
+app.use("/public", express.static(path.join(__dirname, 'public')));
 
 // Acess the Blog model from blog.js
 
@@ -28,9 +35,7 @@ mongoose.connect(dbURI)
         app.listen(3000)
     })
 
-// Set public static directory to allow the browser to acess the files on the server
-// What files should be static?
-app.use(express.static("public"))
+
 
 
 // register the view engine ejs automatically looks in the views folder
