@@ -8,26 +8,21 @@
     <!-- Access the navbar partial component -->
     <%- include ('./partials/nav.ejs') %> 
     <div style="height: 85px; width: 100%;"></div>
-    <div class="row p-4">
-        <div class="col-xl">
-            <img class="img-fluid rounded" src="../public/blog-user.jpg" alt="">
+    <div class="row" >
+        <div class="col-lg">
+            <img class="img-fluid rounded" 
+            data-toggle="animation" data-animation-reset="true" data-animation="slide-out-right"
+            src="../public/blog-user.jpg" alt="">
         </div>
-        <div class="col-xl ">
+        <div  data-mdb-animation-start="onLoad"  class="col-lg">
             <div>
-                <div>
-                    <h1>A Better Story</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit officiis iste dolore quasi eos ipsam assumenda aut ratione commodi optio illo ipsa voluptatem aperiam, maiores et vel aliquid fugit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odio sint eos distinctio, obcaecati consequatur ab molestias blanditiis iure minima, neque officia in ipsam cum omnis quo totam. Dolore, obcaecati.</p>
-                </div>
-                <div>
-                    <h1>A Random Story</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit officiis iste dolore quasi eos ipsam assumenda aut ratione commodi optio illo ipsa voluptatem aperiam, maiores et vel aliquid fugit.</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas libero ratione inventore ipsam deserunt doloremque a hic, fuga suscipit beatae, molestiae tempora tenetur vitae est exercitationem quisquam accusantium deleniti molestias.</p>
-                </div>
-                
+                <h1>A Better Story</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit officiis iste dolore quasi eos ipsam assumenda aut ratione commodi optio illo ipsa voluptatem aperiam, maiores et vel aliquid fugit.</p>
             </div>
-            </div>     
+        </div>     
     </div>
+
+    
     
 
         
