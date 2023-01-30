@@ -1,6 +1,6 @@
 // Using Express
 const {
-    request
+    request, response
 } = require('express')
 const express = require('express')
 
@@ -8,9 +8,14 @@ const express = require('express')
 
 const app = express()
 
+// Acess the Blog model from blog.js
+
+const Blog = require('./models/blog');
+
 // Require the Mongoose Package
 
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
 
 // Ignore deprecation warnings
 mongoose.set('strictQuery', true);
@@ -32,36 +37,31 @@ app.use(express.static("public"))
 app.set('view engine', 'ejs')
 
 
-
 // Middleware that fires for ever request because it it at the top fo the file
 
 
 //Rounting and listening for requests
 
 app.get('/', (request, response) => {
-    const blogs = [{
-            title: 'Sharks found in bathtub'
-            , snippet: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellat deleniti incidunt ex mollitia odio, at numquam omnis. Itaque nobis maiores culpa earum consequuntur eius commodi totam libero nisi veritatis?'
-        }
-        , {
-            title: 'Jason learned that hes not human'
-            , snippet: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellat deleniti incidunt ex mollitia odio, at numquam omnis. Itaque nobis maiores culpa earum consequuntur eius commodi totam libero nisi veritatis?'
-        }
-        , {
-            title: 'Micheal discovers the true meaning of life'
-            , snippet: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi repellat deleniti incidunt ex mollitia odio, at numquam omnis. Itaque nobis maiores culpa earum consequuntur eius commodi totam libero nisi veritatis?'
-        }
-    , ]
-    response.render('index', {
-        title: 'blog'
-        , blogs: blogs
-    })
+    response.render('index', {})
 })
 
 app.get('/about', (request, response) => {
     response.render('about', {
         title: 'about'
     })
+})
+
+//Blog routes
+
+app.get('/blogs', (request,response)=>{
+    Blog.find()
+        .then((result)=>{
+            response.render('blogs', {blogs:result})
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
 })
 
 app.get('/blogs/create', (request, response) => {

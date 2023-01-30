@@ -20,4 +20,7 @@ const blogSchema = new Schema({
 }, { timestamps:true });
 
 // Will look for the plural colllection name within the database ('Blogs')
-const Blog = mongoose.model('Blog');
+const Blog = mongoose.model('Blog', blogSchema);
+
+//Export the blog module
+module.exports =  Blog;
