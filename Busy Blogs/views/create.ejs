@@ -5,13 +5,6 @@
 <%- include ('./partials/head.ejs') %>
 
 <style>
-/* Fade in animation */
-
-@keyframes fade-down {
-  to {
-    opacity: 100%;
-}
-}
 
 @media only screen and (max-width: 1000px) {
 
@@ -25,39 +18,41 @@
 
 .btn-primary{
     background-color: white !important;
-    color: #b48261;
+    color: #b77a51;
     border: none;
 }
 
 .btn-primary:hover{
-    background-color: #e7b390 !important;
+    background-color: #cd8250 !important;
     color: white;
     border: none;
 }
+
+body, ::after, ::before {
+    box-sizing: unset !important;
+    overflow-x: hidden;
+}
+
 
 </style>
 
 <body>
     <!-- Access the navbar partial component -->
     <%- include ('./partials/nav.ejs') %> 
-    <div style="height: 100px; width: 100%;"></div>
-    <div class="row p-2" >
-        <div class="col-lg">
-            <img id='create-blog-hero' class="img-fluid rounded shadow" 
-            data-toggle="animation" data-animation-reset="true" data-animation="slide-out-right"
-            src="../public/blog-user.jpg" alt="">
-        </div>
-        <div  data-mdb-animation-start="onLoad"  class="col-lg">
+    <div style="height: 100px;"></div>
+    <div class="row p-3" >
+        <div class="col-lg" style="background-image: url(.././public/blog-user.jpg); border-radius: 5px 5px 5px 5px; background-size: cover; height: 500px; background-repeat: no-repeat;"></div>
+        <div  class="col-lg">
             <div id="create-blog-hero-heading">
-                <h1>A Better Story</h1>
+                <h1>Share <span style="color: #b48261;">Your</span> Story</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit officiis iste dolore quasi eos ipsam assumenda aut ratione commodi optio illo ipsa voluptatem aperiam, maiores et vel aliquid fugit.</p>
             </div>
         </div>     
     </div>
-    <div style=" background-color: #b48261;" class=" text-center p-2 text-white" >
+    <div style=" background-color: #b48261; width: 100%; box-sizing: none; " id="" class=" text-center p-4 text-white" >
         <h1>Inspiring Stories to give you hope</h1>     
         <p id="banner-two-p" class="mx-auto" style="width: 40%;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus totam tempore quidem modi ab, molestias dolore nulla harum repellendus. Quisquam delectus quasi, voluptatem dicta doloremque id at. Facilis, cum sunt.</p>
-        <button style=" font-weight: 500; height: 60px;" class='btn btn-primary mx-auto'>Go Now</button>
+        <button style=" font-weight: 500;" class='btn btn-primary mx-auto'>Go Now</button>
     </div>
 
     
