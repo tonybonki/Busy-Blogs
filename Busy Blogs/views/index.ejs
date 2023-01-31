@@ -3,13 +3,34 @@
     <!-- Access the head partial component -->
     <%- include ('./partials/head.ejs') %> 
 
-<section>
+<section data-bs-spy="scroll" data-bs-target="#quick-acess-nav" tabindex="0">
 
     <style>
         .center {
             display: flex;
             align-items: center;
         }
+
+        .breadcrumb-item {
+            color: #6c757d;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active{
+            color: #b48261;
+            text-decoration: none;
+        }
+
+        /* .breadcrumb-item {
+            
+        } */
+
+        .breadcrumb-item:hover {
+            transition: .2s;
+            color: #b48261;
+            text-decoration: underline;
+        }
+
 
         /* Remove landing page border radius when in a width <= 766px */
 
@@ -20,6 +41,13 @@
         }
         }
     </style>
+
+<nav class="fixed-top bg-light p-2 rounded-end center" style="top: 100px; width: max-content;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol id="quick-acess-nav" class="breadcrumb" style="margin-top:1%; margin-bottom:auto">
+      <a class="breadcrumb-item active" href="#intro"> Home</a>
+      <a class="breadcrumb-item active" href="#test"> Demo</a>
+    </ol>
+</nav>
 
     <div id="intro" class="bg-image vh-100" style="
     background-repeat: no-repeat;
@@ -35,15 +63,13 @@
                 
     </div>
     
-    </section>
-
-    <div class="navbar navbar-dark bg-dark">
+    <div id="test" class="navbar navbar-dark bg-dark">
         <div class="container-fluid vh-100">
           
         </div>
       </div>
     
-
+    </section>
 <body>
 
     <!-- Access the navbar partial component -->

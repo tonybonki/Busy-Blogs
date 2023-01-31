@@ -4,22 +4,60 @@
 <!-- Access the head partial component -->
 <%- include ('./partials/head.ejs') %>
 
+<style>
+/* Fade in animation */
+
+@keyframes fade-down {
+  to {
+    opacity: 100%;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+
+#banner-two-p{
+    width: 100% !important;
+    margin: 2% !important; 
+}
+}
+
+/* Override default Bootstrap button styling*/
+
+.btn-primary{
+    background-color: white !important;
+    color: #b48261;
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: #e7b390 !important;
+    color: white;
+    border: none;
+}
+
+</style>
+
 <body>
     <!-- Access the navbar partial component -->
     <%- include ('./partials/nav.ejs') %> 
-    <div style="height: 85px; width: 100%;"></div>
-    <div class="row" >
+    <div style="height: 100px; width: 100%;"></div>
+    <div class="row p-2" >
         <div class="col-lg">
-            <img class="img-fluid rounded" 
+            <img id='create-blog-hero' class="img-fluid rounded shadow" 
             data-toggle="animation" data-animation-reset="true" data-animation="slide-out-right"
             src="../public/blog-user.jpg" alt="">
         </div>
         <div  data-mdb-animation-start="onLoad"  class="col-lg">
-            <div>
+            <div id="create-blog-hero-heading">
                 <h1>A Better Story</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit officiis iste dolore quasi eos ipsam assumenda aut ratione commodi optio illo ipsa voluptatem aperiam, maiores et vel aliquid fugit.</p>
             </div>
         </div>     
+    </div>
+    <div style=" background-color: #b48261;" class=" text-center p-2 text-white" >
+        <h1>Inspiring Stories to give you hope</h1>     
+        <p id="banner-two-p" class="mx-auto" style="width: 40%;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus totam tempore quidem modi ab, molestias dolore nulla harum repellendus. Quisquam delectus quasi, voluptatem dicta doloremque id at. Facilis, cum sunt.</p>
+        <button style=" font-weight: 500; height: 60px;" class='btn btn-primary mx-auto'>Go Now</button>
     </div>
 
     
@@ -28,7 +66,8 @@
         
 
         
-    
+    <%- include ('./partials/footer.ejs') %> 
+
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
