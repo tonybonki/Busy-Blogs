@@ -51,10 +51,21 @@
             border-radius: 0px 0px 0px 0px !important; 
         }
         }
+
+        @media only screen and (max-width: 850px) {
+        
+        #red-nav{
+            top: 85px !important;
+        }
+        
+        #landing-page-banner{
+            border-radius: 0px 0px 0px 0px !important; 
+        }
+        }
     </style>
 
-<nav class="fixed-top bg-light p-2 center" style="top: 70px; min-width: 100%; border-bottom: solid #b81f25 4px;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-    <ol id="quick-acess-nav" class="breadcrumb" style="margin-top:1%; font-size: 15px; margin-bottom:auto">
+<nav class="fixed-top bg-light p-2 center" id="red-nav" style="top: 70px; min-width: 100%; border-bottom: solid #b81f25 4px;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol id="quick-acess-nav" class="breadcrumb" style="margin-top:1%; padding: .3%; font-size: 15px; margin-bottom:auto">
       <a class="breadcrumb-item active" href="#intro"> Home</a>
       <a class="breadcrumb-item active" href="#mobile-display">On the Go</a>
     </ol>
