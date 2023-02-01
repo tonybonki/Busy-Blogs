@@ -41,6 +41,10 @@
             transform: rotate(3deg);
         }
 
+        #mobile-display-mobile-view{
+            display: none;
+        }
+
         
 
         /* Remove landing page border radius when in a width <= 766px */
@@ -55,17 +59,29 @@
         @media only screen and (max-width: 850px) {
         
         #red-nav{
-            top: 85px !important;
+            top: 60px !important;
         }
         
+        #mobile-display{
+            display: none;
+        }
+
+        #mobile-display-mobile-view{
+            display: block;
+        }
+
+        #quick-acess-nav{
+            display: none;
+        }
+
         #landing-page-banner{
             border-radius: 0px 0px 0px 0px !important; 
         }
         }
     </style>
 
-<nav class="fixed-top bg-light p-2 center" id="red-nav" style="top: 70px; min-width: 100%; border-bottom: solid #b81f25 4px;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-    <ol id="quick-acess-nav" class="breadcrumb" style="margin-top:1%; padding: .3%; font-size: 15px; margin-bottom:auto">
+<nav id="quick-acess-nav" class="fixed-top bg-light p-2 center" id="red-nav" style="top: 70px; min-width: 100%; border-bottom: solid #b81f25 4px;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol  class="breadcrumb" style="margin-top:1%; padding: .3%; font-size: 16px; margin-bottom:auto">
       <a class="breadcrumb-item active" href="#intro"> Home</a>
       <a class="breadcrumb-item active" href="#mobile-display">On the Go</a>
     </ol>
@@ -77,22 +93,33 @@
     background-image: url('https://cdn.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e.png');">     
     </div>
 
-    <div data-aos="fade-right" data-aos-easing="ease-out-bicubic" data-aos-duration="800" style="position: absolute; top: 300px; height: min-content;"  class="shadow-lg bg-white rounded-end center container-md" id="landing-page-banner">
-        <div class="m-5">
+    <div data-aos="fade-right" data-aos-easing="ease-out-bicubic" data-aos-delay="200" data-aos-duration="800" style="position: absolute; top: 300px; height: min-content;"  class="shadow-lg bg-white rounded-end center container-md" id="landing-page-banner">
+        <div style="padding:50px 0px;" class="">
             <h1 style="color: #b48261;">Write your Own!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo a officia laboriosam sint voluptates aliquid eius exercitationem, eos voluptate quasi laudantium nostrum cupiditate eaque, et ullam dicta! Similique, quam itaque!</p>
+            <p style="padding-bottom: 0px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo a officia laboriosam sint voluptates aliquid eius exercitationem, eos voluptate quasi laudantium nostrum cupiditate eaque, et ullam dicta! Similique, quam itaque!</p>
         </div>
                 
     </div>
-    <div id="mobile-display" class="row align-items-center bg-dark p-5">
-            <div class="col-lg text-white text-center">
+    <div id="mobile-display" class="row align-items-center bg-dark p-2">
+            <div class="col-sm text-white text-center">
                 <h1>Blog as You go</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
             </div>
-            <!-- Use the AOS package to fade out from the right to the left -->
-            <div class="col-lg text-center" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="400">
+            <div data-aos="fade-in" data-aos-easing="ease-out-back" class="col-sm text-center">
                 <img class="img-fluid" id="mobile-view" src="../public/mobile-view-1.png" alt="">
             </div>
+    </div>
+
+    <!-- View for mobile and shorter screen devicies -->
+
+    <div id="mobile-display-mobile-view" class="my-5 bg-dark p-5">
+        <div class="col-sm text-white text-center">
+            <h1>Blog as You go</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" data-aos-easing="ease-out-back class="text-center">
+            <img class="img-fluid" id="mobile-view" src="../public/mobile-view-1.png" alt="">
+        </div>           
     </div>
     
     </section>

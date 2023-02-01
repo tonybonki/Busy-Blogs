@@ -10,3 +10,15 @@ the next middleware function in the application’s request-response cycle.
 
 Mongoose: Is an ODM library - Object Document Mapping Library itprovides us an
 easier way to connect to the MongoDb database.
+
+
+MOBILE VIEW
+<div id="mobile-display" class="my-5 bg-dark p-5">
+    <div class="col-sm text-white text-center">
+        <h1>Blog as You go</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
+    </div>
+    <div class="text-center">
+        <img class="img-fluid" id="mobile-view" src="../public/mobile-view-1.png" alt="">
+    </div>           
+</div>
