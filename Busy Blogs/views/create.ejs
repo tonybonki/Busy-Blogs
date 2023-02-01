@@ -28,9 +28,9 @@
     border: none;
 }
 
-body, ::after, ::before {
-    box-sizing: unset !important;
-    overflow-x: hidden;
+/* Removes the x overflow */
+.row {
+    --bs-gutter-x: 0rem !important;
 }
 
 
@@ -41,9 +41,14 @@ body, ::after, ::before {
     <%- include ('./partials/nav.ejs') %> 
     <div style="height: 100px;"></div>
     <div class="row p-3" >
-        <div class="col-lg" style="background-image: url(.././public/blog-user.jpg); border-radius: 5px 5px 5px 5px; background-size: cover; height: 500px; background-repeat: no-repeat;"></div>
-        <div  class="col-lg">
-            <div id="create-blog-hero-heading">
+        <div class="col-lg" style="background-image: url(.././public/blog-user.jpg); border-radius: 5px 5px 5px 5px; background-size: cover; height: 500px; background-repeat: no-repeat;">
+            <div style="width: max-content; font-weight: 500; color: rgb(105, 105, 105);" class="p-4 m-4 rounded bg-white shadow align-content-middle">
+                <span>OMG!! The craziest thing happend when I was working in Spain</span>
+                <img class="col-sm" height="30" width="30" src="../public/shh-emoji.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="col-lg">
+            <div id="create-blog-hero-heading" class="px-1">
                 <h1>Share <span style="color: #b48261;">Your</span> Story</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit officiis iste dolore quasi eos ipsam assumenda aut ratione commodi optio illo ipsa voluptatem aperiam, maiores et vel aliquid fugit.</p>
             </div>
