@@ -26,6 +26,10 @@ body{
     transition: .3;
 }
 
+.navbar-toggler:focus{
+  box-shadow: none !important;
+}
+
 
 
 
@@ -37,7 +41,7 @@ body{
     <div class="container">
       <a  class="navbar-brand" href="/"><span style=" text-transform: capitalize; color: #b48261; font-weight: 500; letter-spacing: -0.5px;">Busy<span style="color: black;"> Blogs</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="../../public/menu.png"  height="24" width="24" class="fas fa-bars">
+        <img id="nav-btn" src="../../public/menu.png"  height="24" width="24" class="fas fa-bars">
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
@@ -49,23 +53,6 @@ body{
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/blogs/create">New Blog</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <img src="../../public/instagram.png" height="24" width="24" class="fab fa-instagram"></img>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <img src="../../public/instagram.png" height="24" width="24" class="fab fa-instagram"></img>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <img src="../../public/instagram.png" height="24" width="24" class="fab fa-instagram"></img>
-            </a>
           </li>
         </ul>
       </div>
