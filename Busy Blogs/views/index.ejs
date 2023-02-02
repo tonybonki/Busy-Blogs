@@ -33,9 +33,16 @@
         text-decoration: underline;
       }
 
+      #ipad-view {
+        max-width: 20% !important;
+      }
+
       #mobile-view {
-        transform: rotate(3deg);
-        max-width: 70% !important;
+        max-width: 15% !important;
+      }
+
+      #macbook-view{
+        max-width:40% !important;
       }
 
       #mobile-display-mobile-view {
@@ -101,11 +108,22 @@
           border-radius: 0px 0px 0px 0px !important;
         }
       }
+
+      /* Animation */
+
+      #ipad-view{
+        transition-delay: 2s !important;
+      }
+
+      #mobile-view{
+        transition-delay: 1s !important;
+      }
     </style>
    <nav id="quick-acess-nav" class="fixed-top bg-light p-2 center" id="red-nav" style="top: 55px; min-width: 100%; border-bottom: solid #b81f25 4px;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-    <ol  class="breadcrumb" style="margin-top:2%; padding: .3%; font-size: 16px; margin-bottom:auto">
+    <ol  class="breadcrumb" style="margin-top:1.3%; padding: .2%; font-size: 16px; margin-bottom:auto">
       <a class="breadcrumb-item active" href="#intro"> Home</a>
       <a class="breadcrumb-item active" href="#mobile-display">On the Go</a>
+      <a class="breadcrumb-item active" href="#be-inspired">Be Inspired</a>
     </ol>
 </nav>
     <div id="intro" class="bg-image vh-100" style="
@@ -116,18 +134,20 @@
       <div style="padding:50px 0px;" class="">
         <h1>Share <span style="color: #b48261;">Your</span> Story </h1>
         <p style="margin-bottom: 0px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo a officia laboriosam sint voluptates aliquid eius exercitationem, eos voluptate quasi laudantium nostrum cupiditate eaque, et ullam dicta! Similique, quam itaque!</p>
-      </div>
+      </div> 
+      <span id="mobile-display"></span>
     </div>
-    <div id="mobile-display" class="align-items-center bg-dark p-1">
+    
+    <div class="align-items-center bg-dark p-5 mt-4">
       <div class="col-sm text-white text-center">
         <h1>Blog as You go</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
       </div>
-      <!-- Make images the right size  -->
-      <div class="row" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" data-aos-easing="ease-out-back" class="col-sm text-center">
-        <img class="img col-sm m-3" id="mobil4e-view" src="../public/mobile-view-1.png" alt="">
-        <img class="img col-sm m-3" id="mobile-view" src="../public/mobile-view-1.png" alt="">
-        <img class="img col-sm m-3" id="mobile-view" src="../public/mobile-view-1.png" alt="">
+      <!-- Website views through different devices -->
+      <div  class=" text-center">
+        <img data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out" class="img col-sm m-3" id="ipad-view" src="../public/ipad.png" alt="">
+        <img data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out" class="img col-sm m-3" id="mobile-view" src="../public/mobile.png" alt="">
+        <img data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-out" class="img col-sm m-3" id="macbook-view" src="../public/macbook.png" alt="">
       </div>
     </div>
     <!-- View for mobile and shorter screen devicies -->
@@ -136,8 +156,8 @@
         <h1>Blog as You go</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
       </div>
-      <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out-back" class="text-center">
-        <img class="img-fluid" id="mobile-view" src="../public/mobile-view-1.png" alt="">
+      <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out" class="text-center">
+        <img class="img-fluid" src="../public/mobile-view-1.png" alt="">
       </div>
     </div>
   </section>
@@ -146,7 +166,7 @@
     <div class="row p-3">
       <div class="col-lg-5 text-center align-items-middle " style=" background-image: url(.././public/blog-user.jpg); border-radius: 5px 5px 5px 5px; background-size: cover; height: 500px; background-repeat: no-repeat;">
         <!-- Blog Post Snippet -->
-        <div data-aos="fade-up" data-aos-easing="ease-out-bicubic" data-aos-delay="200" data-aos-duration="800" style="background-color: #b48261; width: 50%; font-weight: 500; color: rgb(105, 105, 105);" class="p-2 mt-4 mx-auto d-flex rounded shadow row align-items-center">
+        <div data-aos="zoom-in-up" data-aos-easing="ease-out-back" data-aos-delay="200" data-aos-duration="800" style="background-color: #b48261; width: 50%; font-weight: 500; color: rgb(105, 105, 105);" class="p-2 mt-4 mx-auto d-flex rounded shadow row align-items-center">
           <div class="col">
             <p style="font-weight: 400; margin-bottom: 0%; color: #f2ba95; text-align: start;">Lisa Smith</p>
             <p style="margin-bottom: 0%; color: white; text-align: start;">Guess what happend at work this week!</p>
@@ -156,7 +176,7 @@
           </div>
         </div>
         <!-- Blog Post Snippet -->
-        <div data-aos="fade-up" data-aos-easing="ease-out-bicubic-back" data-aos-delay="1000" data-aos-duration="800" style="background-color: #b48261; width: 50%; font-weight: 500; color: rgb(105, 105, 105);" class="p-2 d-flex ms-4 mt-5 rounded shadow row align-items-center">
+        <div data-aos="zoom-in-up" data-aos-easing="ease-out-back" data-aos-delay="1000" data-aos-duration="800" style="background-color: #b48261; width: 50%; font-weight: 500; color: rgb(105, 105, 105);" class="p-2 d-flex ms-4 mt-5 rounded shadow row align-items-center">
           <div class="col">
             <p style="font-weight: 400; margin-bottom: 0%; color: #f2ba95; text-align: start;">John Doe</p>
             <p style="margin-bottom: 0%; color: white; text-align: start;">I cant believe I got fired from work...</p>
