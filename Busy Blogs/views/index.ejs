@@ -1,143 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Access the head partial component -->
-    <%- include ('./partials/head.ejs') %> 
-
-<section data-bs-spy="scroll" data-bs-target="#quick-acess-nav" tabindex="0">
-
+  <!-- Access the head partial component --><%- include ('./partials/head.ejs') %> <section data-bs-spy="scroll" data-bs-target="#quick-acess-nav" tabindex="0">
     <style>
+      body,
+      ::after,
+      ::before {
+        box-sizing: unset !important;
+        overflow-x: hidden;
+      }
 
-        body, ::after, ::before {
-            box-sizing: unset !important;
-            overflow-x: hidden;
-        }
+      .center {
+        display: flex;
+        align-items: center;
+      }
 
-        .center {
-            display: flex;
-            align-items: center;
-        }
+      .breadcrumb-item {
+        color: #6c757d;
+        text-decoration: none;
+      }
 
-        .breadcrumb-item {
-            color: #6c757d;
-            text-decoration: none;
-        }
+      .breadcrumb-item.active {
+        color: #b48261;
+        text-decoration: none;
+      }
 
-        .breadcrumb-item.active{
-            color: #b48261;
-            text-decoration: none;
-        }
-
-        /* .breadcrumb-item {
+      /* .breadcrumb-item {
             
         } */
+      .breadcrumb-item:hover {
+        transition: .2s;
+        color: #b48261;
+        text-decoration: underline;
+      }
 
-        .breadcrumb-item:hover {
-            transition: .2s;
-            color: #b48261;
-            text-decoration: underline;
+      #mobile-view {
+        transform: rotate(3deg);
+        max-width: 70% !important;
+      }
+
+      #mobile-display-mobile-view {
+        display: none;
+      }
+
+      @media only screen and (max-width: 1000px) {
+        #banner-two-p {
+          width: 100% !important;
+          margin: 2% !important;
+        }
+      }
+
+      /* Override default Bootstrap button styling*/
+      .btn-primary {
+        background-color: white !important;
+        color: #b77a51;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #cd8250 !important;
+        color: white;
+        border: none;
+      }
+
+      /* Removes the x overflow */
+      .row {
+        --bs-gutter-x: 0rem !important;
+      }
+
+      /* Remove landing page border radius when in a width <= 766px */
+      @media only screen and (max-width: 766px) {
+        #landing-page-banner {
+          border-radius: 0px 0px 0px 0px !important;
+        }
+      }
+
+      @media only screen and (max-width: 850px) {
+        #red-nav {
+          top: 60px !important;
         }
 
-        #mobile-view{
-            transform: rotate(3deg);
-            max-width: 70% !important;
+        #mobile-display {
+          display: none;
         }
 
-        #mobile-display-mobile-view{
-            display: none;
+        #mobile-display-mobile-view {
+          display: block;
         }
 
-        
-
-        /* Remove landing page border radius when in a width <= 766px */
-
-        @media only screen and (max-width: 766px) {
-
-        #landing-page-banner{
-            border-radius: 0px 0px 0px 0px !important; 
-        }
+        #quick-acess-nav {
+          display: none;
         }
 
-        @media only screen and (max-width: 850px) {
-        
-        #red-nav{
-            top: 60px !important;
-        }
-        
-        #mobile-display{
-            display: none;
+        #create-blog-hero-heading {
+            margin: 1%;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
         }
 
-        #mobile-display-mobile-view{
-            display: block;
+        #landing-page-banner {
+          border-radius: 0px 0px 0px 0px !important;
         }
-
-        #quick-acess-nav{
-            display: none;
-        }
-
-        #landing-page-banner{
-            border-radius: 0px 0px 0px 0px !important; 
-        }
-        }
+      }
     </style>
-
-<nav id="quick-acess-nav" class="fixed-top bg-light p-2 center" id="red-nav" style="top: 55px; min-width: 100%; border-bottom: solid #b81f25 4px;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-    <ol  class="breadcrumb" style="margin-top:1%; padding: .3%; font-size: 16px; margin-bottom:auto">
+   <nav id="quick-acess-nav" class="fixed-top bg-light p-2 center" id="red-nav" style="top: 55px; min-width: 100%; border-bottom: solid #b81f25 4px;  --bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol  class="breadcrumb" style="margin-top:2%; padding: .3%; font-size: 16px; margin-bottom:auto">
       <a class="breadcrumb-item active" href="#intro"> Home</a>
       <a class="breadcrumb-item active" href="#mobile-display">On the Go</a>
     </ol>
 </nav>
-
     <div id="intro" class="bg-image vh-100" style="
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('https://cdn.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e.png');">     
+    background-image: url('https://cdn.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e.png');"></div>
+    <div data-aos="fade-right" data-aos-easing="ease-out-bicubic" data-aos-delay="200" data-aos-duration="800" style="position: absolute; top: 300px; height: min-content;" class="shadow-lg bg-white rounded-end center container-md" id="landing-page-banner">
+      <div style="padding:50px 0px;" class="">
+        <h1>Share <span style="color: #b48261;">Your</span> Story </h1>
+        <p style="margin-bottom: 0px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo a officia laboriosam sint voluptates aliquid eius exercitationem, eos voluptate quasi laudantium nostrum cupiditate eaque, et ullam dicta! Similique, quam itaque!</p>
+      </div>
     </div>
-
-    <div data-aos="fade-right" data-aos-easing="ease-out-bicubic" data-aos-delay="200" data-aos-duration="800" style="position: absolute; top: 300px; height: min-content;"  class="shadow-lg bg-white rounded-end center container-md" id="landing-page-banner">
-        <div style="padding:50px 0px;" class="">
-            <h1 style="color: #b48261;">Write your Own!</h1>
-            <p style="margin-bottom: 0px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo a officia laboriosam sint voluptates aliquid eius exercitationem, eos voluptate quasi laudantium nostrum cupiditate eaque, et ullam dicta! Similique, quam itaque!</p>
-        </div>
-                
+    <div id="mobile-display" class="align-items-center bg-dark p-1">
+      <div class="col-sm text-white text-center">
+        <h1>Blog as You go</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
+      </div>
+      <!-- Make images the right size  -->
+      <div class="row" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" data-aos-easing="ease-out-back" class="col-sm text-center">
+        <img class="img col-sm m-3" id="mobil4e-view" src="../public/mobile-view-1.png" alt="">
+        <img class="img col-sm m-3" id="mobile-view" src="../public/mobile-view-1.png" alt="">
+        <img class="img col-sm m-3" id="mobile-view" src="../public/mobile-view-1.png" alt="">
+      </div>
     </div>
-    <div id="mobile-display" class="row align-items-center bg-dark p-1">
-            <div class="col-sm text-white text-center">
-                <h1>Blog as You go</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" data-aos-easing="ease-out-back" class="col-sm text-center">
-                <img class="img-fluid" id="mobile-view" src="../public/mobile-view-1.png" alt="">
-            </div>
-    </div>
-
     <!-- View for mobile and shorter screen devicies -->
-
     <div id="mobile-display-mobile-view" class="my-5 bg-dark p-5">
-        <div class="col-sm text-white text-center">
-            <h1>Blog as You go</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out-back" class="text-center">
-            <img class="img-fluid" id="mobile-view" src="../public/mobile-view-1.png" alt="">
-        </div>           
+      <div class="col-sm text-white text-center">
+        <h1>Blog as You go</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out-back" class="text-center">
+        <img class="img-fluid" id="mobile-view" src="../public/mobile-view-1.png" alt="">
+      </div>
     </div>
-    
-    </section>
-<body>
-
-    <!-- Access the navbar partial component -->
-    <%- include ('./partials/nav.ejs') %> 
-   
-        
-
-        
-
-                
-
-    <%- include ('./partials/footer.ejs') %> 
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </section>
+  <body>
+    <!-- Access the navbar partial component --><%- include ('./partials/nav.ejs') %> <div style="height: 100px;"></div>
+    <div class="row p-3">
+      <div class="col-lg-5 text-center align-items-middle " style=" background-image: url(.././public/blog-user.jpg); border-radius: 5px 5px 5px 5px; background-size: cover; height: 500px; background-repeat: no-repeat;">
+        <!-- Blog Post Snippet -->
+        <div data-aos="fade-up" data-aos-easing="ease-out-bicubic" data-aos-delay="200" data-aos-duration="800" style="background-color: #b48261; width: 50%; font-weight: 500; color: rgb(105, 105, 105);" class="p-2 mt-4 mx-auto d-flex rounded shadow row align-items-center">
+          <div class="col">
+            <p style="font-weight: 400; margin-bottom: 0%; color: #f2ba95; text-align: start;">Lisa Smith</p>
+            <p style="margin-bottom: 0%; color: white; text-align: start;">Guess what happend at work this week!</p>
+          </div>
+          <div class="col-2">
+            <img src="../public/shh-emoji.png" height="35" width="35" alt="">
+          </div>
+        </div>
+        <!-- Blog Post Snippet -->
+        <div data-aos="fade-up" data-aos-easing="ease-out-bicubic-back" data-aos-delay="1000" data-aos-duration="800" style="background-color: #b48261; width: 50%; font-weight: 500; color: rgb(105, 105, 105);" class="p-2 d-flex ms-4 mt-5 rounded shadow row align-items-center">
+          <div class="col">
+            <p style="font-weight: 400; margin-bottom: 0%; color: #f2ba95; text-align: start;">John Doe</p>
+            <p style="margin-bottom: 0%; color: white; text-align: start;">I cant believe I got fired from work...</p>
+          </div>
+          <div class="col-2">
+            <img src="../public/grinning-face-with-sweat.png" height="35" width="35" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg">
+        <div id="create-blog-hero-heading" class="px-5">
+          <h1>Be<span style="color: #b48261;"> Inspired</span></h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit officiis iste dolore quasi eos ipsam assumenda aut ratione commodi optio illo ipsa voluptatem aperiam, maiores et vel aliquid fugit.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam aliquid sunt, pariatur consectetur aspernatur harum molestiae expedita impedit delectus repellat numquam ex explicabo distinctio culpa in quo atque. Repellat, aliquam.</p>
+        </div>
+      </div>
+    </div>
+    <div style=" background-color: #b48261; width: 100%; box-sizing: none; " id="" class="my-5 text-center p-4 text-white">
+      <h1>Inspiring Stories to Give you hope</h1>
+      <p id="banner-two-p" class="mx-auto" style="width: 40%;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus totam tempore quidem modi ab, molestias dolore nulla harum repellendus. Quisquam delectus quasi, voluptatem dicta doloremque id at. Facilis, cum sunt.</p>
+      <button style=" font-weight: 500;" class='btn btn-primary mx-auto'>Go Now</button>
+    </div><%- include ('./partials/footer.ejs') %>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </html>
-
