@@ -8,7 +8,32 @@
 
 <body>
     <!-- Import the navbar partial -->
-    <%- include ('./partials/nav.ejs') %> 
+    <!-- <%- include ('./partials/nav.ejs') %> -->
+        <div class=" container row align-items-center vh-100 mx-auto">
+              <div class="border row px-0">
+                <img class="col-sm-5 px-0 img-fluid" src="../public/add-blog.webp" alt="">
+                <!-- Blog Form -->
+                <div class="col-sm">
+                    <form class="p-3">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Title</label>
+                          <input type="text" class="form-control" id="title" required>
+                          <div id="titleHelp" class="form-text">What's the title to your story</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="snippet">Blog snippet:</label>
+                          <input class="form-control" type="text" id="snippet" required>
+                        </div>
+                        <div class="mb-3">
+                          <label  for="body">Body:</label>
+                          <textarea class="form-control" id="body" type="text"></textarea> 
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+              </div>
+        </div>
+    
     
     <!-- Import the footer partial -->
     <%- include ('./partials/footer.ejs') %> 
