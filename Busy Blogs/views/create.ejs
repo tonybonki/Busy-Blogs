@@ -4,36 +4,75 @@
 <!-- Access the head partial component -->
 <%- include ('./partials/head.ejs') %>
 
+<style>
+  .form-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
 
+  #add-blog-button{
+    width: 100%;
+    margin-right: auto;
+    background-color: #b48261;
+    color: white;
+    border: #b48261 solid 2px ;
+    border-radius: 4px;
+    padding: 8px;
+    transition: .2s;
+    font-weight: 500;
+  }
+
+  #add-blog-button:hover{
+    transition: .3s;
+    border: #876249 solid 2px ;
+    background-color: #9f7254;
+  }
+
+  /* Style for mobile devices */
+
+  @media only screen and (max-width: 766px) {
+    .form-container {
+      margin-top:80px !important;
+      margin-bottom:50px !important;
+    }
+  }
+  
+</style>
 
 <body>
     <!-- Import the navbar partial -->
-    <!-- <%- include ('./partials/nav.ejs') %> -->
-        <div class=" container row align-items-center vh-100 mx-auto">
-              <div class="border row px-0">
-                <img class="col-sm-5 px-0 img-fluid" src="../public/add-blog.webp" alt="">
-                <!-- Blog Form -->
-                <div class="col-sm">
-                    <form class="p-3">
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Title</label>
-                          <input type="text" class="form-control" id="title" required>
-                          <div id="titleHelp" class="form-text">What's the title to your story</div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="snippet">Blog snippet:</label>
-                          <input class="form-control" type="text" id="snippet" required>
-                        </div>
-                        <div class="mb-3">
-                          <label  for="body">Body:</label>
-                          <textarea class="form-control" id="body" type="text"></textarea> 
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-                </div>
-              </div>
+    <%- include ('./partials/nav.ejs') %>
+       
+    <div class="form-container">
+      <div style="width: 35rem;" class="container-fluid p-3 m-3">
+        <div class="text-center">
+          <img class="mt-5 rounded " src="../public/logo.jpg" height="150px" width="150px" alt="Website Logo">
+          </div>
+        <div>
+          <h2 class="text-center">Write <span style="color: #b48261;">your</span>  Own!</h3>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
-    
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Blog Title:</label>
+          <input type="text" class="form-control" id="title" placeholder="An extraordinary blog title">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Blog snippet:</label>
+          <input type="text" class="form-control" placeholder="A short description" id="snippet"></input>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Blog body:</label>
+          <textarea name="body" id="body" class="form-control" cols="30" style="max-height: 200px;" rows="8"></textarea>
+        </div>
+        <div style="width: 30%;" class="mx-auto m-3">
+          <button  id="add-blog-button">Submit</button>
+        </div>
+        
+      </div>
+    </div>
+
     
     <!-- Import the footer partial -->
     <%- include ('./partials/footer.ejs') %> 
