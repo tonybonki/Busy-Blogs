@@ -11,9 +11,19 @@ const path = require('path')
 
 const app = express()
 
+
 // Set public static directory to allow the browser to acess the files on the server
 // What files should be static?
 app.use("/public", express.static(path.join(__dirname, 'public')));
+
+
+var bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 // Acess the Blog model from blog.js
 
@@ -69,11 +79,20 @@ app.get('/blogs', (request,response)=>{
         })
 })
 
-app.get('/blogs/create', (request, response) => {
+app.post('/blogs', (request, response) => {
+    console.log(request.body)
+    response.redirect('/blogs')
+})
+
+app.get('/blogs/create', (request, response) => {    
     response.render('create', {
         title: 'Create a blog'
     })
 })
+
+
+
+
 
 //404 page when a user uses aan url that has to link mapped to it.
 // This is an example of middleware

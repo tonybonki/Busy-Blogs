@@ -25,9 +25,15 @@
   }
 
   #add-blog-button:hover{
-    transition: .3s;
-    border: #876249 solid 2px ;
+    transition: .2s;
+    
     background-color: #9f7254;
+  }
+  
+  #add-blog-button:active{
+    color: white;
+    border: #876249 solid 2px ;
+    background-color: #6a4a34;
   }
 
   /* Style for mobile devices */
@@ -52,27 +58,31 @@
           </div>
         <div>
           <h2 class="text-center">Write <span style="color: #b48261;">your</span>  Own!</h3>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h6 style="color: #876249;" class="card-text text-center">Share your story with the world.</h6>
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Blog Title:</label>
-          <input type="text" class="form-control" id="title" placeholder="An extraordinary blog title">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Blog snippet:</label>
-          <input type="text" class="form-control" placeholder="A short description" id="snippet"></input>
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Blog body:</label>
-          <textarea name="body" id="body" class="form-control" cols="30" style="max-height: 200px;" rows="8"></textarea>
-        </div>
-        <div style="width: 30%;" class="mx-auto m-3">
-          <button  id="add-blog-button">Submit</button>
-        </div>
-        
+        <form action="/blogs" method="POST">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Blog Title:</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="An extraordinary blog title">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Blog snippet:</label>
+            <input type="text" class="form-control" name="snippet" placeholder="A short description" id="snippet"></input>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Blog body:</label>
+            <textarea name="body" id="body" placeholder="Your story" class="form-control" cols="30" style="max-height: 200px;" rows="8"></textarea>
+          </div>
+          <div style="width: 30%;" class="mx-auto m-3">
+            <button id="add-blog-button">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
-
+    	
+    <form action="/blogs" method="post">
+      <button>Submit</button>
+    </form>
     
     <!-- Import the footer partial -->
     <%- include ('./partials/footer.ejs') %> 
