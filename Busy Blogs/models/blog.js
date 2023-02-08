@@ -2,6 +2,11 @@ const mongoose =  require('mongoose');
 // Define the structure of the documents (Construtor funciton)
 const Schema = mongoose.Schema;
 
+let ts = Date.now();
+
+let date_ob = new Date(ts);
+let date = date_ob.getDate();
+
 //Define and create a new schema
 const blogSchema = new Schema({
     title: {
@@ -15,7 +20,11 @@ const blogSchema = new Schema({
     body: {
         type:String,
         required:true,
-    }
+    },
+    createdAt: {
+        type: Date,
+        default: date
+      }
     // Added updated/created properties
 }, { timestamps:true });
 

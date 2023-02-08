@@ -1,19 +1,37 @@
 <%- include ('./partials/head.ejs') %>
 
-<%- include ('./partials/nav.ejs') %> 
+<!-- <%- include ('./partials/nav.ejs') %>  -->
 
-<div  class="container-sm mx-auto my-4">
-    <h2 style=" color: #b48261" class="mx-auto">All Blogs</h2>
+<div  class="container mt-5 mx-auto">
     <% if (blogs.length > 0) { %>
         <% blogs.forEach(blog => { %>
-        <div class="container-xs px-0 mt-5 shadow-sm ">  
-            <h4 style="color: white ; background-color:#a89385 ;" class="title p-3 rounded-top"><%= blog.title %></h4>
-            <p class="snippet  p-2"><%= blog.snippet %> </p>
-        </div>
+        <div class="toast-header">
+            <!-- <img src="..." class="rounded me-2" alt="..."> -->
+            <strong class="me-auto"><%= blog.title %></strong>
+            <small><%= blog.createdAt %></small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            <%= blog.body %>
+          </div>
+          <hr>
         <%  }) %>
     <% } %>
 </div>
 
+
+
+<div class="toast" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
 
 <!-- Animation -->
 <!-- <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>

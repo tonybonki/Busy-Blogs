@@ -5,9 +5,6 @@ const _ = require('lodash')
 
 // Create a server
 const server = http.createServer((request, response)=>{
-    
-    // lodash
-    const num = _.random(0, 20)
 
     // set header content type to html
     response.setHeader('Content-Type', 'text/html')

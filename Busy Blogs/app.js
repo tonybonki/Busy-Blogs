@@ -86,7 +86,6 @@ app.post('/blogs', (request, response) => {
         .then((result) =>{
             response.redirect('/blogs')
         })
-    response.redirect('/blogs')
 })
 
 app.get('/blogs/create', (request, response) => {    
