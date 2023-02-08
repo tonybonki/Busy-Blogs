@@ -21,10 +21,6 @@ const blogSchema = new Schema({
         type:String,
         required:true,
     },
-    createdAt: {
-        type: Date,
-        default: date
-      }
     // Added updated/created properties
 }, { timestamps:true });
 
