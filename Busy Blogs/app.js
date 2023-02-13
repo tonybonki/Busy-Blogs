@@ -32,6 +32,7 @@ const Blog = require('./models/blog');
 // Require the Mongoose Package
 
 const mongoose = require('mongoose');
+const { render } = require('ejs');
 
 
 // Ignore deprecation warnings
@@ -79,6 +80,16 @@ app.post('/blogs', (request, response) => {
     blog.save()
         .then((result) =>{
             response.redirect('/blogs')
+        })
+})
+
+
+// Get a page with the object id
+app.get('/blogs:id', (request, response) => {    
+    const id = request.params.id;
+    Blog.findById(id)
+        .then(result => {
+            response.render('blog-details', { blog: result})
         })
 })
 

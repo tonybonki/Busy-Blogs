@@ -40,14 +40,15 @@
         <% if (blogs.length > 0) { %>
             <% blogs.forEach(blog => { %>
             <div class="border rounded shadow-sm m-4 p-3">
+              <a style="color: inherit; text-decoration: inherit;" href="blogs<%= blog._id %>">
                 <div class="toast-header">
-                    <!-- <img src="..." class="rounded me-2" alt="..."> -->
-                    <h6 style=" color: #b48261;" class="me-auto"><%= blog.title %></h6>
+                    <h5 style=" color: #b48261;" class="me-auto"><%= blog.title %></h5>
                   </div>
                   <p class="mb-1" style="font-size: 15px; opacity: 70%;">"<%= blog.snippet %>"</p>
                   <div class="toast-body">
                     <%= blog.body %>
                   </div>
+                </a>
             </div>
     
             <%  }) %>
