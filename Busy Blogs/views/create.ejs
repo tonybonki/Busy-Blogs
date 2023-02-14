@@ -29,11 +29,33 @@
 
   #add-blog-button:hover{
     transition: .2s;
-    
     background-color: #9f7254;
   }
   
   #add-blog-button:active{
+    color: white;
+    border: #876249 solid 2px ;
+    background-color: #6a4a34;
+  }
+  
+  #understood-btn{
+    width: 100%;
+    margin-right: auto;
+    background-color: #b48261;
+    color: white;
+    border: #b48261 solid 2px ;
+    border-radius: 4px;
+    padding: 8px;
+    transition: .2s;
+    font-weight: 500;
+  }
+
+  #understood-btn:hover{
+    transition: .2s;
+    background-color: #9f7254;
+  }
+  
+  #understood-btn:active{
     color: white;
     border: #876249 solid 2px ;
     background-color: #6a4a34;
@@ -46,40 +68,88 @@
       margin-top:80px !important;
       margin-bottom:50px !important;
     }
+    .container-fluid{
+      display: block !important;
+    }
   }
   
 </style>
 
 <body>
     
+  
+
     <div class="center-container">
-      <div style="width: 35rem;" class="container-fluid p-3 m-3">
-        <div class="text-center">
-          <img class="mt-5 rounded " src="../public/logo.jpg" height="150px" width="150px" alt="Website Logo">
+      <div style="width: 70rem; " class="container-fluid p-3 m-3 d-flex">
+        <!-- Form Tutorial -->
+        <div style="height: 100vh; width: 50rem;   margin: auto;" class="d-flex align-items-center" >
+          <div class="modal-body p-5">
+            <h2 class="fw-bold">Write <span style="color: #b48261;">your</span>  Own!</h2>
+    
+            <ul class="d-grid gap-4 my-5 list-unstyled">
+              <li class="d-flex gap-4">
+                <svg class="bi text-muted flex-shrink-0" width="48" height="48"><use xlink:href="#grid-fill"></use></svg>
+                <div>
+                  <h5 class="mb-0">Think of a thoughtful <span style="color: #b48261;">Title</span>  Catch their attention</h5>
+                  Try think if of an intriguing title that will attracted the attention of others!
+                </div>
+              </li>
+              <li class="d-flex gap-4">
+                <svg class="bi text-warning flex-shrink-0" width="48" height="48"><use xlink:href="#bookmark-star"></use></svg>
+                <div>
+                  <h5 class="mb-0">A sassy <span style="color: #b48261;">Snippet</span></h5>
+                  Write a short but captivating summary of your story.
+                </div>
+              </li>
+              <li class="d-flex gap-4">
+                <svg class="bi text-primary flex-shrink-0" width="48" height="48"><use xlink:href="#film"></use></svg>
+                <div>
+                  <h5 class="mb-0"><span style="color: #b48261;">Your</span> Story</h5>
+                  Write your story in this section to show the world what crazy mishaps you have experienced.
+                </div>
+              </li>
+            </ul>
+            <div style="width: 30%;" class="mx-auto m-3">
+              <button id="understood-btn">Submit</button>
+            </div>
           </div>
-        <div>
-          <h2 class="text-center">Write <span style="color: #b48261;">your</span>  Own!</h3>
-          <h6 style="color: #876249;" class="card-text text-center">Share your story with the world.</h6>
         </div>
-        <form action="/blogs" method="POST">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Blog Title:</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="An extraordinary blog title">
+        <!-- Form Title and Form Logo -->
+        <div>
+          <div class="text-center">
+            <img class="mt-5 rounded " src="../public/logo.jpg" height="150px" width="150px" alt="Website Logo">
+            </div>
+          <div>
+            <h2 class="text-center">Write <span style="color: #b48261;">your</span>  Own!</h2>
+            <h6 style="color: #876249;" class="card-text text-center">Share your story with the world.</h6>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Blog snippet:</label>
-            <input type="text" class="form-control" name="snippet" placeholder="A short description" id="snippet"></input>
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Blog body:</label>
-            <textarea name="body" id="body" placeholder="Your story" class="form-control" cols="30" style="max-height: 200px;" rows="8"></textarea>
-          </div>
-          <div style="width: 30%;" class="mx-auto m-3">
-            <button id="add-blog-button">Submit</button>
-          </div>
-        </form>
-      </div>
+          <form action="/blogs" method="POST">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Blog Title:</label>
+              <input type="text" required class="form-control" id="title" name="title" placeholder="An extraordinary blog title">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Blog snippet:</label>
+              <input type="text" required class="form-control" name="snippet" placeholder="A short description" id="snippet"></input>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Blog body:</label>
+              <textarea name="body" required id="body" placeholder="Your story" class="form-control" cols="30" style="max-height: 200px;" rows="8"></textarea>
+            </div>
+            <div style="width: 30%;" class="mx-auto m-3">
+              <button id="add-blog-button">Submit</button>
+            </div>
+          </form>
+        </div>
+        </div>
+        
     </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("panel").style.display = "block";
+      }
+      </script>
     	
     
     <!-- Import the footer partial -->

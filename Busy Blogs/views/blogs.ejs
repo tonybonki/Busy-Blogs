@@ -1,8 +1,19 @@
 <%- include ('./partials/head.ejs') %>
 
-<%- include ('./partials/nav.ejs') %>
+
 
 <style>
+  #blogs:hover{
+    transition: .2s;
+    transition-timing-function: ease-out;
+    transform: scale(102%);
+  }
+
+  #blogs{
+    transition: .1s;
+    transition-timing-function: ease-in;
+  }
+
   .btn-primary{
     --bs-btn-bg: #B48261 !important;
     --bs-btn-border-color: #B48261 !important;
@@ -21,6 +32,8 @@
 
 
 <body>
+  <%- include ('./partials/nav.ejs') %>
+  
 
   <div class="container mt-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
@@ -36,10 +49,10 @@
     </div>
   </div>
   
-    <div  class="container mt-5 mx-auto ">
+    <div class="container mt-5 mx-auto ">
         <% if (blogs.length > 0) { %>
             <% blogs.forEach(blog => { %>
-            <div class="border rounded shadow-sm m-4 p-3">
+            <div id="blogs" class="border rounded shadow-sm m-4 p-3">
               <a style="color: inherit; text-decoration: inherit;" href="blogs<%= blog._id %>">
                 <div class="toast-header">
                     <h5 style=" color: #b48261;" class="me-auto"><%= blog.title %></h5>
