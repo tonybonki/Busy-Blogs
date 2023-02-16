@@ -39,6 +39,12 @@
     background-color: #6a4a34;
   }
 
+  /* Animations */
+
+  #blog-title{
+    transition-timing-function: cubic-bezier(0.09, 0.35, 0.43, 0.99) !important;
+      }
+
   /* Style for mobile devices */
 
   @media only screen and (max-width: 766px) {
@@ -55,9 +61,15 @@
     <div class="navbar navbar-dark " style="background-color: #6a4a34;">
       <div class="container-fluid vh-100">
           <div class="text-white container-sm mx-auto text-center">
-              <h1>
+              <h1 id="blog-title" data-aos="fade-up" data-aos-once="true" data-aos-delay="200" data-aos-duration="700">
                 <%= blog.title %> 
-              </h1>
+              </h1><hr data-aos="fade-up" data-aos-once="true" style=" transition-delay: 1s !important; "data-aos-duration="700" style="border-top: 2px white solid !important; opacity: 100%;">
+              <p id="blog-title" data-aos="fade-up" data-aos-once="true" style="transition-delay: 1.7s !important; "data-aos-duration="700">
+                <span>"<%= blog.snippet %>"</span>  
+              </p>
+              <p id="blog-title" data-aos="fade-up" data-aos-once="true" style="transition-delay: 1.7s !important; "data-aos-duration="700">
+                <span><%= blog.body %></span>  
+              </p>
           </div>
       </div>
     </div>
