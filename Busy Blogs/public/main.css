@@ -4,12 +4,14 @@ body{
     color: #525051 !important;
     font-family: 'Rubik', sans-serif !important;
 }
+
 /* Container to vertically and horrizonally center content */
 .center-container{
 display: flex;
 justify-content: center;
 align-items: center;
 }
+
 /* Customise Bootstrap button */
 .btn-primary{
     --bs-btn-bg: #B48261 !important;
@@ -53,12 +55,47 @@ align-items: center;
     letter-spacing: 3px;
   }
 
+/* Removes the x overflow on the index.ejs*/
+.row {
+    --bs-gutter-x: 0rem !important;
+}
 
-/* Animation Rules and Declarations */
+/* Display mobile views in different ways based on device width */
+.center {
+    display: flex;
+    align-items: center;
+  }
+
+
+  #ipad-view {
+    max-width: 20% !important;
+  }
+
+  #mobile-view {
+    max-width: 15% !important;
+  }
+
+  #macbook-view{
+    max-width:40% !important;
+  }
+
+  #mobile-display-mobile-view {
+    display: none;
+  }
+
+/* Animation Rules and Declarations and properties */
 
 #blog-title{
     transition-timing-function: cubic-bezier(0.09, 0.35, 0.43, 0.99) !important;
 }
+
+#ipad-view{
+    transition-delay: 1s !important;
+  }
+
+  #mobile-view{
+    transition-delay: .5s !important;
+  }
 
 /* Responsive CSS Rules */
 
@@ -66,5 +103,37 @@ align-items: center;
     .form-container {
       margin-top:80px !important;
       margin-bottom:50px !important;
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    #red-nav {
+      top: 60px !important;
+    }
+
+    #mobile-display {
+      display: none;
+    }
+
+    #mobile-display-mobile-view {
+      display: block;
+    }
+
+
+    #create-blog-hero-heading {
+        margin: 1%;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    #landing-page-banner {
+      border-radius: 0px 0px 0px 0px !important;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #banner-two-p {
+      width: 100% !important;
+      margin: 2% !important;
     }
   }

@@ -2,122 +2,6 @@
 <html lang="en">
  
   <!-- Access the head partial component --><%- include ('./partials/head.ejs') %> <section data-bs-spy="scroll" data-bs-target="#quick-acess-nav" tabindex="0">
-    <style>
-      /* body,
-      ::after,
-      ::before {
-        box-sizing: unset !important;
-        overflow-x: hidden;
-      } */
-
-      .center {
-        display: flex;
-        align-items: center;
-      }
-
-      .breadcrumb-item {
-        color: #6c757d;
-        text-decoration: none;
-      }
-
-      .breadcrumb-item.active {
-        color: #b48261;
-        text-decoration: none;
-      }
-
-      /* .breadcrumb-item {
-            
-        } */
-      .breadcrumb-item:hover {
-        transition: .2s;
-        color: #b48261;
-        text-decoration: underline;
-      }
-
-      #ipad-view {
-        max-width: 20% !important;
-      }
-
-      #mobile-view {
-        max-width: 15% !important;
-      }
-
-      #macbook-view{
-        max-width:40% !important;
-      }
-
-      #mobile-display-mobile-view {
-        display: none;
-      }
-
-      @media only screen and (max-width: 1000px) {
-        #banner-two-p {
-          width: 100% !important;
-          margin: 2% !important;
-        }
-      }
-
-      /* Override default Bootstrap button styling*/
-      .btn-primary {
-        background-color: white !important;
-        color: #b77a51;
-        border: none;
-      }
-
-      .btn-primary:hover {
-        background-color: #cd8250 !important;
-        color: white;
-        border: none;
-      }
-
-      /* Removes the x overflow */
-      .row {
-        --bs-gutter-x: 0rem !important;
-      }
-
-      /* Remove landing page border radius when in a width <= 766px */
-      @media only screen and (max-width: 766px) {
-        #landing-page-banner {
-          border-radius: 0px 0px 0px 0px !important;
-        }
-      }
-
-      @media only screen and (max-width: 850px) {
-        #red-nav {
-          top: 60px !important;
-        }
-
-        #mobile-display {
-          display: none;
-        }
-
-        #mobile-display-mobile-view {
-          display: block;
-        }
-
-
-        #create-blog-hero-heading {
-            margin: 1%;
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-        }
-
-        #landing-page-banner {
-          border-radius: 0px 0px 0px 0px !important;
-        }
-      }
-
-      /* Animation */
-
-      #ipad-view{
-        transition-delay: 1s !important;
-      }
-
-      #mobile-view{
-        transition-delay: .5s !important;
-      }
-
-    </style>
     <div id="intro" class="bg-image vh-100" style="
     background-repeat: no-repeat;
     background-size: cover;
@@ -191,7 +75,7 @@
     <div style=" background-color: #b48261; width: 100%; box-sizing: none; " id="" class="my-5 text-center p-4 text-white">
       <h1>Inspiring Stories to Give you hope</h1>
       <p id="banner-two-p" class="mx-auto" style="width: 40%;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus totam tempore quidem modi ab, molestias dolore nulla harum repellendus. Quisquam delectus quasi, voluptatem dicta doloremque id at. Facilis, cum sunt.</p>
-      <button style=" font-weight: 500;" class='btn btn-primary mx-auto'>Go Now</button>
+       <a href="/blogs"> <button style=" font-weight: 500;" class='btn btn-primary mx-auto'>Read Posted Blogs</button></a>
     </div><%- include ('./partials/footer.ejs') %>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
