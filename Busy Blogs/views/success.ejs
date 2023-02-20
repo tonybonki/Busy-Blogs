@@ -7,6 +7,7 @@
       <div class="container-sm mx-auto text-center">
         <div style="width: 35rem;" class="container-fluid p-3 my-auto m-3 mx-auto text-center ">
             <lord-icon
+              	class="data-aos="zoom-in""
                 src="https://cdn.lordicon.com/rjzlnunf.json"
                 trigger="loop"
                 delay="1000"
@@ -15,8 +16,15 @@
                 state="hover-1"
                 style="width:250px;height:250px">
             </lord-icon>
-            <h1>This is the world</h1>
+            <h3>Thank You!</h3>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Redirect the page to the blogs page after the user submitts a blog  -->
+  <script>
+    window.setTimeout(function () {
+        location.href = "/blogs";
+    }, 3000);
+  </script>
