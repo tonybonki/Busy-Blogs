@@ -1,13 +1,12 @@
-<%- include ('./partials/head.ejs') %>
 <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+<%- include ('./partials/head.ejs') %>
 
 
-<div class="navbar">
-    <div class="container-fluid vh-100">
-      <div class="container-sm mx-auto text-center">
-        <div style="width: 35rem;" class="container-fluid p-3 my-auto m-3 mx-auto text-center ">
-            <lord-icon
-              	class="data-aos="zoom-in""
+
+    <div class="container-fluid vh-100 d-flex align-items-center">
+      <div class="container-m mx-auto text-center">
+        <div class="container-fluid m-3 mx-auto text-center ">
+            <lord-icon class="img-fluid"
                 src="https://cdn.lordicon.com/rjzlnunf.json"
                 trigger="loop"
                 delay="1000"
@@ -20,11 +19,10 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Redirect the page to the blogs page after the user submitts a blog  -->
   <script>
-    window.setTimeout(function () {
-        location.href = "/blogs";
-    }, 3000);
+    // window.setTimeout(function () {
+    //     location.href = "/blogs";
+    // }, 3000);
   </script>
