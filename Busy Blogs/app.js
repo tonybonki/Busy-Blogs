@@ -79,7 +79,7 @@ app.post('/blogs', (request, response) => {
 
     blog.save()
         .then((result) =>{
-            response.redirect('/blogs')
+            response.redirect('/success')
         })
 })
 
