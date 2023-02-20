@@ -99,6 +99,10 @@ app.get('/blogs/create', (request, response) => {
     })
 })
 
+// Get a sucess page when the user completes the form
+app.get('/success', (request, response) => {    
+    response.render('success')
+})
 
 
 
