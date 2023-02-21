@@ -20,7 +20,7 @@
               <p id="blog-title" data-aos="fade-up" data-aos-once="true" style="transition-delay: 1.7s !important; "data-aos-duration="700">
                 <span><%= blog.body %></span>  
               </p>
-              <button id="delete-btn" data-aos="fade-in" data-aos-once="true" style="transition-delay: 3s !important; "data-aos-duration="900"  class="btn btn-primary">Delete</button> 
+          <a href="#" class="delete" data-doc="'<%= blog._id %>"><button id="delete-btn" data-aos="fade-in" data-aos-once="true" style="transition-delay: 3s !important; "data-aos-duration="900"  class="btn btn-primary">Delete</button> </a>    
           </div>       
       </div>
       
@@ -29,5 +29,21 @@
     <!-- Import the footer partial -->
     <%- include ('./partials/footer.ejs') %> 
 </body>
+
+<script>
+  const trashcan = document.querySelector('a.delete')
+  trashcan.addEventListener('click', (event)=>{
+    const endPoint = `/blogs/${trashcan.dataset.doc}`
+
+    fetch(endPoint, {
+      method: 'DELETE'
+    })
+    .then(()=>{
+
+    })
+    .catch(err => cosnole.log(err))
+  })
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </html>

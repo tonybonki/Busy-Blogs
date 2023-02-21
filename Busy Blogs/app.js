@@ -99,6 +99,18 @@ app.get('/blogs/create', (request, response) => {
     })
 })
 
+app.delete('/blogs/:id', (request, response) =>{
+    const id = request.params.id
+
+    Blog.findOneAndDelete(id)
+        .then(result=>{
+            response.json({ redirect: '/blogs' })
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+})
+
 // Get a sucess page when the user completes the form
 app.get('/success', (request, response) => {    
     response.render('success')

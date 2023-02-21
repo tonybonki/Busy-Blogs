@@ -26,6 +26,12 @@ align-items: center;
   transition: .2s;
 }
 
+#blogs-container{
+  max-height: 100vh;
+  overflow-y: scroll;
+  border-left: solid #9f7254 3px;
+}
+
 /* Customise Bootstrap button */
 .btn-primary{
     --bs-btn-bg: #B48261 !important;
@@ -51,6 +57,9 @@ align-items: center;
     margin-bottom: -2px;
 }
 
+.nav-link{
+  font-size: 15px !important;
+}
 
 .nav-link:hover{
     color: #b48261;
