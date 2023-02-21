@@ -16,6 +16,7 @@ align-items: center;
 
 #blogs{
   transition: .1s;
+  background-color: white;
   transition-timing-function: ease-in;
 }
 
@@ -143,6 +144,10 @@ align-items: center;
       top: 60px !important;
     }
 
+    #blogs-container{
+      border: none;
+    }
+
     #mobile-display {
       display: none;
     }
@@ -150,7 +155,6 @@ align-items: center;
     #mobile-display-mobile-view {
       display: block;
     }
-
 
     #create-blog-hero-heading {
         margin: 1%;
