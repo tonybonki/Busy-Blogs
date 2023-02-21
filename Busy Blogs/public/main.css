@@ -12,6 +12,19 @@ justify-content: center;
 align-items: center;
 }
 
+/* Blog */
+
+#blogs{
+  transition: .1s;
+  transition-timing-function: ease-in;
+}
+
+#blogs:hover{
+  transform: scale(102%);
+  transition-timing-function: ease-out;
+  transition: .2s;
+}
+
 /* Customise Bootstrap button */
 .btn-primary{
     --bs-btn-bg: #B48261 !important;
