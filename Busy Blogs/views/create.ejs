@@ -21,15 +21,15 @@
         <form action="/blogs" method="POST">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Blog Title:</label>
-            <input type="text" required class="form-control" id="title" name="title" placeholder="An extraordinary blog title">
+            <input maxlength="25" type="text" required class="form-control" id="title" name="title" placeholder="An extraordinary blog title">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Blog snippet:</label>
-            <input type="text"  required class="form-control" name="snippet" placeholder="A short description" id="snippet"></input>
+            <input type="text" maxlength="70"  required class="form-control" name="snippet" placeholder="A short description" id="snippet"></input>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Blog body:</label>
-            <textarea name="body" required id="body" placeholder="Your story" class="form-control" cols="30" style="max-height: 200px;" rows="8"></textarea>
+            <textarea name="body" maxlength="500" required id="body" placeholder="Your story" class="form-control" cols="30" style="max-height: 200px;" rows="8"></textarea>
           </div>
           <div style="width: 30%;" class="mx-auto m-3 text-center">
             <button class="btn btn-primary">Submit</button>
