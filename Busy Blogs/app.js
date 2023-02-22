@@ -33,6 +33,7 @@ const Blog = require('./models/blog');
 
 const mongoose = require('mongoose');
 const { render } = require('ejs');
+const { result } = require('lodash');
 
 
 // Ignore deprecation warnings
@@ -87,6 +88,8 @@ app.post('/blogs', (request, response) => {
 // Get a page with the object id
 app.get('/blogs:id', (request, response) => {    
     const id = request.params.id;
+    console.log
+    Blog.count()
     Blog.findById(id)
         .then(result => {
             response.render('blog-details', { blog: result})
@@ -99,16 +102,14 @@ app.get('/blogs/create', (request, response) => {
     })
 })
 
-app.delete('/blogs/:id', (request, response) =>{
+app.delete('/blogs/:id', (request, response) => {
     const id = request.params.id
-
-    Blog.findOneAndDelete(id)
-        .then(result=>{
+    
+    Blog.findByIdAndDelete(id)
+        .then(result =>{
             response.json({ redirect: '/blogs' })
         })
-        .catch(err=>{
-            console.log(err)
-        })
+        .catch(err => {console.log(err)})
 })
 
 // Get a sucess page when the user completes the form

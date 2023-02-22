@@ -20,7 +20,7 @@
               <p id="blog-title" data-aos="fade-up" data-aos-once="true" style="transition-delay: 1.7s !important; "data-aos-duration="700">
                 <span><%= blog.body %></span>  
               </p>
-          <a href="#" class="delete" data-doc="'<%= blog._id %>"><button id="delete-btn" data-aos="fade-in" data-aos-once="true" style="transition-delay: 3s !important; "data-aos-duration="900"  class="btn btn-primary">Delete</button> </a>    
+          <a class="delete" data-doc="<%= blog._id %>"><button id="delete-btn" data-aos="fade-in" data-aos-once="true" style="transition-delay: 3s !important; "data-aos-duration="900"  class="btn btn-primary">Delete</button> </a>    
           </div>       
       </div>
       
@@ -38,9 +38,8 @@
     fetch(endPoint, {
       method: 'DELETE'
     })
-    .then(()=>{
-
-    })
+    .then((response)=>response.json())
+    .then((data)=> window.location.href = data.redirect)
     .catch(err => cosnole.log(err))
   })
 </script>
