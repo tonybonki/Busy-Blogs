@@ -84,12 +84,14 @@ app.post('/blogs', (request, response) => {
         })
 })
 
+Blog.count(function(error, numOfDocs) {
+    console.log(numOfDocs.toString)
+})
+
 
 // Get a page with the object id
 app.get('/blogs:id', (request, response) => {    
     const id = request.params.id;
-    console.log
-    Blog.count()
     Blog.findById(id)
         .then(result => {
             response.render('blog-details', { blog: result})
