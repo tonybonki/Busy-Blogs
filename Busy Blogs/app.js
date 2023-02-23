@@ -63,7 +63,6 @@ app.get('/', (request, response) => {
     response.render('index', {})
 })
 
-//Blog routes
 
 app.get('/blogs', (request,response)=>{
     Blog.find()
@@ -84,9 +83,6 @@ app.post('/blogs', (request, response) => {
         })
 })
 
-Blog.count(function(error, numOfDocs) {
-    console.log(numOfDocs.toString)
-})
 
 
 // Get a page with the object id
