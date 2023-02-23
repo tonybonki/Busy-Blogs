@@ -11,13 +11,17 @@
         <img src="../public/blogs-img.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" >
       </div>
       <div class="col-lg-6">
-        <h1 class="display-6 fw-bold lh-1 mb-3">Read <span style="color: #b48261;">Amazing blogs</span>  that people have posted!</h1>
+        <% if (blogs.length > 0) { %>
+        <h1 class="display-6 fw-bold lh-1 mb-3">We currently have <%= blogs.length %><span style="color: #b48261;">Amazing blogs</span>  that people have posted!</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fugiat a necessitatibus tempora, molestias obcaecati eveniet culpa maxime quia, maiores possimus similique. Enim labore distinctio numquam delectus impedit amet deleniti?</p>
         <a href="/blogs/create"><button style=" font-weight: 500;" class="btn btn-primary">Add your Own</button></a>
+        <% } %>
+        
       </div>
       
     </div>
   </div>
+
 
   
   <!-- List of Blogs -->
