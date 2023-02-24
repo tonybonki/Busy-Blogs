@@ -29,12 +29,9 @@ This is just one of many websites that I will be creating to practice and also s
 </div>
 
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `tonybonki`, `Busy-Blogs-Node.js`, `twitter_handle`, `linkedin_username`, `tony.bonki2@mail.dcu.ie_client`, `tony.bonki2@mail.dcu.ie`, `Busy Blogs`, `project_description`
 
 
-
-
-### Built With
+## Built With
 
  [![Node.js][Node.js]][Node-url]
  [![Ejs][Ejs.co]][Ejs-url]
@@ -52,25 +49,24 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Install/update npm to the latest version. Download node.js on your computer globally or in your local directory.
   ```sh
   npm install npm@latest -g
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+
+1. Install NPM packages
+* Aos is a npm pacakge created by 
+[michalsnik](https://github.com/michalsnik/aos) containing built in animations. 
    ```sh
-   git clone https://github.com/tonybonki/Busy-Blogs-Node.js.git
+   npm install aos
    ```
-3. Install NPM packages
+* EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. Learn more  
+[here](https://ejs.co). 
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   npm install aos
    ```
 
 
