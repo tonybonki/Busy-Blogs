@@ -8,10 +8,10 @@
     <img src="Busy Blogs/public/tab-logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h1 style='font-weight:500' align="center">Busy Blogs</h1>
+<h1 align="center">Busy Blogs</h1>
 
   <p align="center">
-    A beutiful blog website that includes backend frunctionality built with MongoDB and nodeJS libraries.
+    A beautiful blog website with backend frunctionality built with MongoDB Node.js, Bootstrap 5.2 and EJS.
     <br />
     <a href="https://github.com/tonybonki/Busy-Blogs-Node.js">View Demo</a>
     ·
@@ -25,9 +25,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This is just one of many websites that I will be creating to practice and also show off my fullstack website development skills. I called this project Busy Blogs because users will be able to create their own blog posts and post it onto the website. I will any user will be able to view their blog posts andd also other posts on the website and have the option to delete the blog posts.
 
 <div align='center' class='flex-container'>
-<img style = 'min-width:300%;' src="Busy Blogs/public/blogs-img.png" alt="website-cover">
+<img width='400' src="Busy Blogs/public/blogs-img.png" alt="website-cover">
 
 </div>
 
