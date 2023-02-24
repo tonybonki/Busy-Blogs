@@ -11,13 +11,13 @@
     <div class="navbar navbar-dark " style="background-color: #6a4a34;">
       <div class="container-fluid vh-100 ">
           <div class="text-white container-sm mx-auto text-center">
-              <h1 id="blog-title" data-aos="fade-up" data-aos-once="true" data-aos-delay="200" data-aos-duration="700">
+              <h1 id="blog-title">
                 <%= blog.title %> 
-              </h1><hr data-aos="fade-up" data-aos-once="true" style=" transition-delay: 1s !important; "data-aos-duration="700" style="border-top: 2px white solid !important; opacity: 100%;">
-              <p id="blog-title" data-aos="fade-up" data-aos-once="true" style="transition-delay: 1.7s !important; "data-aos-duration="700">
+              </h1>
+              <p id="blog-title">
                 <span>"<%= blog.snippet %>"</span>  
               </p>
-              <p id="blog-title" data-aos="fade-up" data-aos-once="true" style="transition-delay: 1.7s !important; "data-aos-duration="700">
+              <p id="blog-title">
                 <span><%= blog.body %></span>  
               </p>
           <a class="delete" data-doc="<%= blog._id %>"><button id="delete-btn" data-aos="fade-in" data-aos-once="true" style="transition-delay: 3s !important; "data-aos-duration="900"  class="btn btn-primary">Delete</button> </a>    
@@ -30,6 +30,7 @@
     <%- include ('./partials/footer.ejs') %> 
 </body>
 
+<!-- When the delete button is clicked deleted the blog that was posted -->
 <script>
   const trashcan = document.querySelector('a.delete')
   trashcan.addEventListener('click', (event)=>{

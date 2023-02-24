@@ -29,7 +29,7 @@ align-items: center;
 #blogs-container{
   max-height: 100vh;
   overflow-y:scroll;
-  border-left: solid #a40910 3px;
+  border-left: solid #b48261 4px;
 }
 
 /* Customise Bootstrap button */
