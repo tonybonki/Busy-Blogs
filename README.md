@@ -25,8 +25,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<style>
+    .flex-container {
+  display: flex;
+  flex-direction: row;
+}
 
-<img align='center' src="https://i.ibb.co/xzqYQ7N/mobile.png" alt="website image" style='' >
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+
+<div align='center' class='flex-container'>
+<img style = 'margin-bottom:10%' src="Busy Blogs/public/blogs-img.png" alt="website-cover">
+<img src="Busy Blogs/public/blogs-img.png" alt="website-cover">
+
+</div>
 
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `tonybonki`, `Busy-Blogs-Node.js`, `twitter_handle`, `linkedin_username`, `tony.bonki2@mail.dcu.ie_client`, `tony.bonki2@mail.dcu.ie`, `Busy Blogs`, `project_description`
