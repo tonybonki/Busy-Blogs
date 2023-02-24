@@ -26,7 +26,7 @@
 ## About The Project
 
 
-<img src="https://i.ibb.co/m0GnGSc/website-main.png" alt="website image" style='' width="720">
+<img src="https://i.ibb.co/xzqYQ7N/mobile.png" alt="website image" style='' width="220">
 
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `tonybonki`, `Busy-Blogs-Node.js`, `twitter_handle`, `linkedin_username`, `tony.bonki2@mail.dcu.ie_client`, `tony.bonki2@mail.dcu.ie`, `Busy Blogs`, `project_description`
