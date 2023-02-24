@@ -1,11 +1,7 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/tonybonki/Busy-Blogs-Node.js">
-    <img src="Busy Blogs/public/tab-logo.png" alt="Logo" width="80" height="80">
+    <img src="Busy Blogs/public/tab-logo.png" alt="Logo" width="200" height="200">
   </a>
 
 <h1 align="center">Busy Blogs</h1>
@@ -131,7 +127,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - tony.bonki2@mail.dcu.ie@tony.bonki2@mail.dcu.ie_client.com
+Your Name - [BonchiiYT](https://twitter.com/twitter_handle) - tony.bonki2@mail.dcu.ie@tony.bonki2@mail.dcu.ie_client.com
 
 Project Link: [https://github.com/tonybonki/Busy-Blogs-Node.js](https://github.com/tonybonki/Busy-Blogs-Node.js)
 
