@@ -123,17 +123,3 @@ app.get('/success', (request, response) => {
 app.use((request, response) => {
     response.status(404).render('404')
 })
-
-// Testing
-const router = express.Router();
-
-router.get("/", (req, res) => {
-  res.json({
-    hello: "hi!"
-  });
-});
-
-app.use(`/.netlify/functions/api`, router);
-
-module.exports = app;
-module.exports.handler = serverless(app);
