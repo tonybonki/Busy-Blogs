@@ -116,7 +116,11 @@ app.get('/success', (request, response) => {
 })
 
 
+const PORT = process.env.PORT || 3000; // Set the port number to 3000
 
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+  });
 
 //404 page when a user uses aan url that has to link mapped to it.
 // This is an example of middleware
