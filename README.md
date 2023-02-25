@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/tonybonki/Busy-Blogs-Node.js">
-    <img src="Busy Blogs/public/tab-logo.png" alt="Logo" width="200" height="200">
+    <img src="Busy Blogs/public/tab-logo.png" alt="Logo" width="150" height="150">
   </a>
 
 <h1 align="center">Busy Blogs</h1>
@@ -66,7 +66,15 @@ This is an example of how to list things you need to use the software and how to
 * EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. Learn more  
 [here](https://ejs.co). 
    ```sh
-   npm install aos
+   npm install ejs
+   ```
+* [Lodash](https://www.npmjs.com/package/lodash) is a JavaScript library which provides utility functions for common programming tasks using the functional programming paradigm.  
+   ```sh
+   npm install lodash
+   ```
+* [Mongoose](https://www.npmjs.com/package/mongoose) is an Object Data Modeling (ODM) library for MongoDB and Node.js.
+   ```sh
+   npm install mongoose
    ```
 
 
