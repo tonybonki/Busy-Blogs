@@ -1,24 +1,27 @@
 {
-  "name": "tutorial-2",
+  "name": "netlify-express",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "netlify-lambda": "^1.4.3",
+    "serverless-http": "^1.9.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
     "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owenconti/netlify-express.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "aos": "^2.3.4",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "lodash": "^4.17.21",
-    "mongoose": "^6.10.0",
-    "netlify": "^13.1.2",
-    "netlify-lambda": "^2.0.16",
-    "nodemon": "^2.0.20",
-    "serverless-http": "^3.1.1"
-  }
+  "bugs": {
+    "url": "https://github.com/owenconti/netlify-express/issues"
+  },
+  "homepage": "https://github.com/owenconti/netlify-express#readme"
 }
