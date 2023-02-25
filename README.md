@@ -9,11 +9,6 @@
   <p align="center">
     A beautiful blog website with backend frunctionality built with MongoDB Node.js, Bootstrap 5.2 and EJS.
     <br />
-    <a href="https://github.com/tonybonki/Busy-Blogs-Node.js">View Demo</a>
-    ·
-    <a href="https://github.com/tonybonki/Busy-Blogs-Node.js/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/tonybonki/Busy-Blogs-Node.js/issues">Request Feature</a>
   </p>
 </div>
 
@@ -76,6 +71,11 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install mongoose
    ```
+* [Nodemon](https://nodemon.io) is an Object Data Modeling (ODM) library for MongoDB and Node.js.
+   ```sh
+   npm install mongoose
+   ```
+
 
 
 
@@ -83,39 +83,15 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Go into the "Busy blogs" directory and run
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/tonybonki/Busy-Blogs-Node.js/issues) for a full list of proposed features (and known issues).
+```sh
+nodemon app
+```
+This will start the application on your local machine server.
 
 
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 
 
@@ -123,7 +99,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for more information.
 
 
 
@@ -131,20 +107,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [BonchiiYT](https://twitter.com/twitter_handle) - tony.bonki2@mail.dcu.ie@tony.bonki2@mail.dcu.ie_client.com
+Tony Bonki - [BonchiiYT](https://twitter.com/twitter_handle) - tony.bonki2@mail.dcu.ie - https://tony-bonki-e5933b.netlify.app
 
 Project Link: [https://github.com/tonybonki/Busy-Blogs-Node.js](https://github.com/tonybonki/Busy-Blogs-Node.js)
-
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
 
 
 
