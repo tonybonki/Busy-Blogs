@@ -2,3 +2,4 @@
 301 - Resource moved
 404 - Not Found
 500 - Internal server error
+npm install aos ejs express lodash mongoose netlify nodemon && npm start
