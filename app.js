@@ -63,7 +63,7 @@ app.get('/', (request, response) => {
     response.render('index', {})
 })
 
-server.listen(3000, 'localhost', ()=>{
+app.listen(3000, 'localhost', ()=>{
     console.log('listening for request on port 3000')
 })
 
