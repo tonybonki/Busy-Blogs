@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/tonybonki/Busy-Blogs-Node.js">
-    <img src="Busy Blogs/public/tab-logo.png" alt="Logo" width="150" height="150">
+    <img src="public/tab-logo.png" alt="Logo" width="150" height="150">
   </a>
 
 <h1 align="center">Busy Blogs</h1>
