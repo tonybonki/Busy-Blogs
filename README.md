@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is just one of many websites that I will be creating to practice and also show off my fullstack website development skills. I called this project Busy Blogs because users will be able to create their own blog posts and post it onto the website. I will any user will be able to view their blog posts andd also other posts on the website and have the option to delete the blog posts.
+This is just one of many websites that I will be creating to practice and also show off my fullstack website development skills. I called this project Busy Blogs because users will be able to create their own blog posts and post it onto the website. 
 
 <div align='center' class='flex-container'>
 <img width='400' src="/public/blogs-img.png" alt="website-cover">
